@@ -1,3 +1,9 @@
+const rockbtn = document.querySelector("#rockbtn");
+const paperbtn = document.querySelector("#paperbtn");
+const scissorsbtn = document.querySelector("#scissorsbtn");
+const lizardbtn = document.querySelector("#lizardbtn");
+const spockbtn = document.querySelector("#spockbtn");
+
 function getComputerChoice() {
     let computerNumber = Math.floor(Math.random() * 5)
     if (computerNumber == 0) {
@@ -17,10 +23,10 @@ function getComputerChoice() {
     }
 }
 
-function playGame(){
+//function playGame(){
     let playerScore = 0;
     let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
+//    for (let i = 0; i < 5; i++) {
         function playRound(playerSelection, computerSelection) {
             if (
                 (playerSelection == "paper" && computerSelection == "scissors")
@@ -151,20 +157,61 @@ function playGame(){
                     return ("It's a tie!")
             }
         }
-        const playerSelection = prompt ("Please type rock, paper, scissors, lizard or Spock").toLowerCase();
-        console.log("Player Selected:", playerSelection)
-        const computerSelection = getComputerChoice();
-        console.log("Computer Selected:", computerSelection)
-        console.log(playRound(playerSelection, computerSelection));
+
+        rockbtn.addEventListener("click", () => {
+            const playerSelection = "rock";
+            const computerSelection = getComputerChoice();
+            console.log("Player Selected:", playerSelection)
+            console.log("Computer Selected:", computerSelection)
+            console.log(playRound(playerSelection, computerSelection));
+            console.log("Button works");
+        })
+
+        paperbtn.addEventListener("click", () => {
+            const playerSelection = "paper";
+            const computerSelection = getComputerChoice();
+            console.log("Player Selected:", playerSelection);
+            console.log("Computer Selected:", computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+            console.log("Button works");
+        })
+
+        scissorsbtn.addEventListener("click", () => {
+            const playerSelection = "scissors";
+            const computerSelection = getComputerChoice();
+            console.log("Player Selected:", playerSelection);
+            console.log("Computer Selected:", computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+            console.log("Button works");
+        })
+
+        lizardbtn.addEventListener("click", () => {
+            const playerSelection = "lizard";
+            const computerSelection = getComputerChoice();
+            console.log("Player Selected:", playerSelection);
+            console.log("Computer Selected:", computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+            console.log("Button works");
+        })
+
+        spockbtn.addEventListener("click", () => {
+            const playerSelection = "spock";
+            const computerSelection = getComputerChoice();
+            console.log("Player Selected:", playerSelection);
+            console.log("Computer Selected:", computerSelection);
+            console.log(playRound(playerSelection, computerSelection));
+            console.log("Button works");
+        })
+
         console.log("Player Score:", playerScore)
         console.log("Computer Score:", computerScore)
-    }
-    if (playerScore > computerScore) {
-        alert ("You Win! Congrats!")
-    }
-    if (computerScore > playerScore) {
-        alert ("You Lose! Sorry!")
-    }
-}
+//    }
+//    if (playerScore > computerScore) {
+//        alert ("You Win! Congrats!")
+//    }
+//    if (computerScore > playerScore) {
+//        alert ("You Lose! Sorry!")
+//    }
+//}
 
-playGame();
+//playGame();
