@@ -3,6 +3,7 @@ const paperbtn = document.querySelector("#paperbtn");
 const scissorsbtn = document.querySelector("#scissorsbtn");
 const lizardbtn = document.querySelector("#lizardbtn");
 const spockbtn = document.querySelector("#spockbtn");
+const cosmicbtn = document.querySelector("#easter-egg");
 
 function getComputerChoice() {
     let computerNumber = Math.floor(Math.random() * 5)
@@ -27,6 +28,12 @@ let playerScore = 0;
 let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
+    if (
+        (playerSelection == "cosmic" && computerSelection == ("rock") || ("paper") || ("scissors") || ("lizard") || ("spock"))
+        ) {
+            playerScore++;
+            return ("Cosmic Christronaut Destroys ALL!")
+    }
     if (
         (playerSelection == "paper" && computerSelection == "scissors")
         ) {
@@ -342,6 +349,34 @@ spockbtn.addEventListener("click", () => {
 
     const playerResult = document.createElement("div");
     playerResult.textContent = ("You selected:" + playerSelection);
+    roundResults.appendChild(playerResult);
+
+    const computerResult = document.createElement("div");
+    computerResult.textContent = ("Computer selected:" + computerSelection);
+    roundResults.appendChild(computerResult);
+
+    const roundResultsContent = document.createElement("div");
+    roundResultsContent.textContent = (playRound(playerSelection,computerSelection));
+    roundResults.appendChild(roundResultsContent);
+
+    updateScores();
+    checkGameEnd();
+})
+
+cosmicbtn.addEventListener("click", () => {
+    const playerSelection = "cosmic";
+    const computerSelection = getComputerChoice();
+    console.log("Player Selected:", playerSelection);
+    console.log("Computer Selected:", computerSelection);
+
+    const gameResults = document.querySelector("#game-results");
+    gameResults.textContent = '';
+
+    const roundResults = document.querySelector("#round-results");
+    roundResults.textContent = '';
+
+    const playerResult = document.createElement("div");
+    playerResult.textContent = ("You selected: The Cosmic Christronaut");
     roundResults.appendChild(playerResult);
 
     const computerResult = document.createElement("div");
