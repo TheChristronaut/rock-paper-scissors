@@ -29,12 +29,6 @@ let computerScore = 0;
 
 function playRound(playerSelection, computerSelection) {
     if (
-        (playerSelection == "cosmic" && computerSelection == ("rock") || ("paper") || ("scissors") || ("lizard") || ("spock"))
-        ) {
-            playerScore++;
-            return ("Cosmic Christronaut Destroys ALL!")
-    }
-    if (
         (playerSelection == "paper" && computerSelection == "scissors")
         ) {
             computerScore++;
@@ -161,6 +155,12 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "lizard" && computerSelection == "lizard") ||
         (playerSelection == "spock" && computerSelection == "spock")) {
             return ("It's a tie!")
+    }
+    if (
+        (playerSelection == "cosmic" && computerSelection == ("rock") || ("paper") || ("scissors") || ("lizard") || ("spock"))
+        ) {
+            playerScore++;
+            return ("Cosmic Christronaut Destroys ALL!")
     }
 }
 
