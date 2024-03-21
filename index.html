@@ -4,28 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <button id="rockbtn" class="choice-button">Rock</button>
-        <button id="paperbtn" class="choice-button">Paper</button>
-        <button id="scissorsbtn" class="choice-button">Scissors</button>
-        <button id="lizardbtn" class="choice-button">Lizard</button>
-        <button id="spockbtn" class="choice-button">Spock</button>
+    <div class="header">
+        <img src="images/the-christronaut-title.png" alt="The Cosmic Christronaut" height="120px">
+        <p class="title">Rock, Paper, Scissors, Lizard, Spock<br>(from The Big Bang Theory)</p>
     </div>
-    <div>
-        <ul>
-            <li>Scissors cuts Paper</li>
-            <li>Paper covers Rock</li>
-            <li>Rock crushes Lizard</li>
-            <li>Lizard poisons Spock</li>
-            <li>Spock smashes Scissors</li>
-            <li>Scissors decapitates Lizard</li>
-            <li>Lizard eats Paper</li>
-            <li>Paper disproves Spock</li>
-            <li>Spock vaporizes Rock</li>
-            <li>and as it always has, Rock crushes Scissors</li>
-        </ul>
+    <h1>Choose your weapon! <br> You vs Your Computer <br> First to score 5 wins!</h1>
+    <div class="selection-buttons">
+        <div class="choice-button"><button id="rockbtn" class="emoji-button">&#9994</button>Rock</div>
+        <div class="choice-button"><button id="paperbtn" class="emoji-button">&#9995</button>Paper</div>
+        <div class="choice-button"><button id="scissorsbtn" class="emoji-button">&#9996</button>Scissors</div>
+        <div class="choice-button"><button id="lizardbtn" class="emoji-button">&#129295</button>Lizard</div>
+        <div class="choice-button"><button id="spockbtn" class="emoji-button">&#128406</button>Spock</div>
+    </div>
+    <div class="rules-score">
+        <div class="rule-list">
+            <h2>Rules</h2>
+            <ul>
+                <li>Scissors cuts Paper</li>
+                <li>Paper covers Rock</li>
+                <li>Rock crushes Lizard</li>
+                <li>Lizard poisons Spock</li>
+                <li>Spock smashes Scissors</li>
+                <li>Scissors decapitates Lizard</li>
+                <li>Lizard eats Paper</li>
+                <li>Paper disproves Spock</li>
+                <li>Spock vaporizes Rock</li>
+                <li>and as it always has, Rock crushes Scissors</li>
+            </ul>
+        </div>
+        <p id="round-results"></p>
+        <div class="scores">
+            <ul>
+                <li id="player-score"></li>
+                <li id="computer-score"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-text">Copyright &#169 The Cosmic Christronaut 2024</div>
     </div>
     <script src="script.js"></script>
 </body>
