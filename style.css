@@ -76,12 +76,12 @@ h2 {
 .rule-list {
     width: 500px;
 }
-#round-results {
+.results {
     width: 500px;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1em;
     justify-self: flex-start;
 }
 .scores {
@@ -89,6 +89,7 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 1.5em;
+    text-align: center;
 }
 .footer {
     display: flex;
@@ -104,9 +105,6 @@ h2 {
     font-size: 14px;
     color: white;
 }
-#player-score {
-    color: #5ca333;
-}
-#computer-score {
-    color: #d31111;
+#game-results {
+    font-size: 40px;
 }

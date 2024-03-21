@@ -160,6 +160,26 @@ function playRound(playerSelection, computerSelection) {
 function updateScores() {
     console.log("Player Score:", playerScore);
     console.log("Computer Score:", computerScore);
+
+    const playerScoreResult = document.querySelector("#score-results");
+
+    playerScoreResult.textContent = '';
+
+    const playerScoreResultContent = document.createElement('li');
+    playerScoreResultContent.classList.add("player-score");
+    playerScoreResultContent.textContent = ("Player Score:" + (playerScore));
+    playerScoreResult.style.color = "darkolivegreen";
+
+    playerScoreResult.appendChild(playerScoreResultContent);
+
+    const computerScoreResult = document.querySelector("#score-results");
+
+    const computerScoreResultContent = document.createElement('li');
+    computerScoreResultContent.classList.add("computer-score");
+    computerScoreResultContent.textContent = ("Computer Score:" + (computerScore));
+    computerScoreResultContent.style.color = "darkred";
+
+    computerScoreResult.appendChild(computerScoreResultContent);
 }
 
 function resetGame() {
@@ -169,21 +189,57 @@ function resetGame() {
 
 function checkGameEnd() {
     if (playerScore === 5) {
-        alert ("You Win! Congrats!");
+
         resetGame();
+
+        const gameResults = document.querySelector("#game-results");
+        gameResults.textContent = '';
+
+        const gameResultsContent = document.createElement("div");
+        gameResultsContent.textContent = ("You Win! Congrats!");
+        gameResultsContent.style.color = "forestgreen";
+
+        gameResults.appendChild(gameResultsContent);
     }
     if (computerScore === 5) {
-        alert ("You Lose! Sorry!");
+
         resetGame();
+
+        const gameResults = document.querySelector("#game-results");
+        gameResults.textContent = '';
+
+        const gameResultsContent = document.createElement("div");
+        gameResultsContent.textContent = ("You Lose! Sorry!");
+        gameResultsContent.style.color = "crimson";
+
+        gameResults.appendChild(gameResultsContent);
     }
 }
 
 rockbtn.addEventListener("click", () => {
     const playerSelection = "rock";
     const computerSelection = getComputerChoice();
-    console.log("Player Selected:", playerSelection)
-    console.log("Computer Selected:", computerSelection)
-    console.log(playRound(playerSelection, computerSelection));
+    console.log("Player Selected:", playerSelection);
+    console.log("Computer Selected:", computerSelection);
+
+    const gameResults = document.querySelector("#game-results");
+    gameResults.textContent = '';
+
+    const roundResults = document.querySelector("#round-results");
+    roundResults.textContent = '';
+
+    const playerResult = document.createElement("div");
+    playerResult.textContent = ("You selected:" + playerSelection);
+    roundResults.appendChild(playerResult);
+
+    const computerResult = document.createElement("div");
+    computerResult.textContent = ("Computer selected:" + computerSelection);
+    roundResults.appendChild(computerResult);
+
+    const roundResultsContent = document.createElement("div");
+    roundResultsContent.textContent = (playRound(playerSelection,computerSelection));
+    roundResults.appendChild(roundResultsContent);
+
     updateScores();
     checkGameEnd();
 })
@@ -193,7 +249,25 @@ paperbtn.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
     console.log("Player Selected:", playerSelection);
     console.log("Computer Selected:", computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+
+    const gameResults = document.querySelector("#game-results");
+    gameResults.textContent = '';
+
+    const roundResults = document.querySelector("#round-results");
+    roundResults.textContent = '';
+
+    const playerResult = document.createElement("div");
+    playerResult.textContent = ("You selected:" + playerSelection);
+    roundResults.appendChild(playerResult);
+
+    const computerResult = document.createElement("div");
+    computerResult.textContent = ("Computer selected:" + computerSelection);
+    roundResults.appendChild(computerResult);
+
+    const roundResultsContent = document.createElement("div");
+    roundResultsContent.textContent = (playRound(playerSelection,computerSelection));
+    roundResults.appendChild(roundResultsContent);
+
     updateScores();
     checkGameEnd();
 })
@@ -203,7 +277,25 @@ scissorsbtn.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
     console.log("Player Selected:", playerSelection);
     console.log("Computer Selected:", computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+
+    const gameResults = document.querySelector("#game-results");
+    gameResults.textContent = '';
+
+    const roundResults = document.querySelector("#round-results");
+    roundResults.textContent = '';
+
+    const playerResult = document.createElement("div");
+    playerResult.textContent = ("You selected:" + playerSelection);
+    roundResults.appendChild(playerResult);
+
+    const computerResult = document.createElement("div");
+    computerResult.textContent = ("Computer selected:" + computerSelection);
+    roundResults.appendChild(computerResult);
+
+    const roundResultsContent = document.createElement("div");
+    roundResultsContent.textContent = (playRound(playerSelection,computerSelection));
+    roundResults.appendChild(roundResultsContent);
+
     updateScores();
     checkGameEnd();
 })
@@ -213,7 +305,25 @@ lizardbtn.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
     console.log("Player Selected:", playerSelection);
     console.log("Computer Selected:", computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+
+    const gameResults = document.querySelector("#game-results");
+    gameResults.textContent = '';
+
+    const roundResults = document.querySelector("#round-results");
+    roundResults.textContent = '';
+
+    const playerResult = document.createElement("div");
+    playerResult.textContent = ("You selected:" + playerSelection);
+    roundResults.appendChild(playerResult);
+
+    const computerResult = document.createElement("div");
+    computerResult.textContent = ("Computer selected:" + computerSelection);
+    roundResults.appendChild(computerResult);
+
+    const roundResultsContent = document.createElement("div");
+    roundResultsContent.textContent = (playRound(playerSelection,computerSelection));
+    roundResults.appendChild(roundResultsContent);
+
     updateScores();
     checkGameEnd();
 })
@@ -223,7 +333,25 @@ spockbtn.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
     console.log("Player Selected:", playerSelection);
     console.log("Computer Selected:", computerSelection);
-    console.log(playRound(playerSelection, computerSelection));
+
+    const gameResults = document.querySelector("#game-results");
+    gameResults.textContent = '';
+
+    const roundResults = document.querySelector("#round-results");
+    roundResults.textContent = '';
+
+    const playerResult = document.createElement("div");
+    playerResult.textContent = ("You selected:" + playerSelection);
+    roundResults.appendChild(playerResult);
+
+    const computerResult = document.createElement("div");
+    computerResult.textContent = ("Computer selected:" + computerSelection);
+    roundResults.appendChild(computerResult);
+
+    const roundResultsContent = document.createElement("div");
+    roundResultsContent.textContent = (playRound(playerSelection,computerSelection));
+    roundResults.appendChild(roundResultsContent);
+
     updateScores();
     checkGameEnd();
 })
